@@ -1,0 +1,97 @@
+/* Reset básico do CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do botão */
+button {
+    font: 20px Arial solid;
+    color: black;
+    background-color: #E0F6FF;
+    border-radius: 7px;
+}
+
+/* Estilo do rodapé */
+footer {
+    font: 20px Arial solid;
+    background: #D8C5A8;
+}
+
+/* Estilo da Div (principal e única) no Body */
+.game-board {
+  width: 100%;
+  height: 500px;
+  border-bottom: 15px solid #D8C5A8;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+/* Estilo da Class do nitro/obstáculo do jogo */
+.nitro {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: nitro-animation 1.5s infinite linear;
+}
+
+/* Estilo da Class do personagem do jogo */
+.crash {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Estilo da animação do pulo */
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+/* Estilo da animação do fundo do jogo */
+.tree { 
+    position: absolute;
+    width: 550px;
+    animation: tree-animation 15s infinite linear;
+}
+
+/* KeyFrames da animação do nitro/obstáculo */
+@keyframes nitro-animation {
+  from {
+    right: -80px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+/* KeyFrames da animação do pulo do personagem Crash */
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 150px;
+  }
+  50% {
+    bottom: 180px;
+  }
+  60% {
+    bottom: 150px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+/* KeyFrames da animação de fundo árvore  */
+@keyframes tree-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
